@@ -1,0 +1,39 @@
+{
+  "name": "angular-module-federation",
+  "version": "1.0.0",
+  "description": "Angular Module Federation example: AI Chat Client with shell and federated micro-frontends",
+  "private": true,
+  "scripts": {
+    "start:shell":    "ng serve shell --port 4200",
+    "start:chat":     "ng serve chat --port 4201",
+    "start:history":  "ng serve history --port 4202",
+    "start:settings": "ng serve settings --port 4203",
+    "start:all":      "concurrently \"npm run start:chat\" \"npm run start:history\" \"npm run start:settings\" \"npm run start:shell\"",
+    "build:chat":     "ng build chat",
+    "build:history":  "ng build history",
+    "build:settings": "ng build settings",
+    "build:shell":    "ng build shell",
+    "build:all":      "npm run build:chat && npm run build:history && npm run build:settings && npm run build:shell"
+  },
+  "dependencies": {
+    "@angular/animations":              "^18.0.0",
+    "@angular/common":                  "^18.0.0",
+    "@angular/compiler":                "^18.0.0",
+    "@angular/core":                    "^18.0.0",
+    "@angular/forms":                   "^18.0.0",
+    "@angular/platform-browser":        "^18.0.0",
+    "@angular/platform-browser-dynamic":"^18.0.0",
+    "@angular/router":                  "^18.0.0",
+    "rxjs":                             "~7.8.0",
+    "tslib":                            "^2.6.0",
+    "zone.js":                          "~0.14.0"
+  },
+  "devDependencies": {
+    "@angular-architects/module-federation": "^18.0.0",
+    "@angular-builders/custom-webpack":     "^18.0.0",
+    "@angular/cli":                         "~18.0.0",
+    "@angular/compiler-cli":               "^18.0.0",
+    "concurrently":                         "^8.2.0",
+    "typescript":                           "~5.4.0"
+  }
+}
