@@ -1,0 +1,5 @@
+{
+  "chat":     "http://localhost:4201/remoteEntry.js",
+  "history":  "http://localhost:4202/remoteEntry.js",
+  "settings": "http://localhost:4203/remoteEntry.js"
+}
